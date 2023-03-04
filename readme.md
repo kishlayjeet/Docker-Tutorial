@@ -6,7 +6,7 @@ Docker is a containerization platform that makes it easy to build, ship, and run
 
 #### In this tutorial, we'll cover the following topics:
 
-1. [What is Docker?](#what-is-docker?)
+1. [What is Docker?](#what-is-docker)
 2. [How Docker works](#how-docker-works)
 3. [Installing Docker](#installing-docker)
 4. [Running a Docker container](#running-a-docker-container)
