@@ -36,7 +36,7 @@ To run a Docker container, you need to start with an image. You can use the `doc
 For example, to run a container of the popular `hello-world` image, you can run the following command:
 
 ```bash
- docker run hello-world
+docker run hello-world
 ```
 
 This will download the image if it's not already available on your system and start a container from it. The container will print a message to the console and then exit.
@@ -48,11 +48,11 @@ To build a Docker image, you can use a Dockerfile. A Dockerfile is a script that
 Here's an example Dockerfile:
 
 ```bash
- FROM python:3.9
- WORKDIR /app
- COPY . /app
- RUN pip install -r requirements.txt
- CMD ["python", "app.py"]
+FROM python:3.9
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
+CMD ["python", "app.py"]
 ```
 
 This Dockerfile starts with the official Python 3.9 image, sets the working directory to `/app`, copies the current directory to `/app`, installs the dependencies listed in `requirements.txt`, and sets the default command to run `app.py`.
@@ -60,7 +60,7 @@ This Dockerfile starts with the official Python 3.9 image, sets the working dire
 To build an image from this Dockerfile, you can run the following command:
 
 ```bash
- docker build -t my-image .
+docker build -t my-image .
 ```
 
 This will build an image with the tag `my-image` from the current directory (denoted by the `.` at the end of the command).
@@ -72,7 +72,7 @@ If you want to share your Docker image with others, you can push it to a Docker 
 To push an image to a registry, you first need to tag it with the registry URL and repository name. For example, to tag the `my-image` with the Docker Hub registry and the `my-repo` repository, you can run the following command:
 
 ```bash
- docker tag my-image username/my-repo
+docker tag my-image username/my-repo
 ```
 
 You need to replace `username` with your Docker Hub username or organization name.
@@ -80,7 +80,7 @@ You need to replace `username` with your Docker Hub username or organization nam
 Once the image is tagged, you can push it to the registry with the `docker push` command:
 
 ```bash
- docker push username/my-repo
+docker push username/my-repo
 ```
 
 This will upload the image to the Docker Hub registry under your username and the `my-repo` repository name. Other users can then download and run your image by using the `docker pull` command with the same repository name.
@@ -90,7 +90,7 @@ This will upload the image to the Docker Hub registry under your username and th
 To run a container from a remote image, you can use the `docker run` command with the image name. For example, to run a container from the official nginx image, you can run the following command:
 
 ```bash
- docker run nginx
+docker run nginx
 ```
 
 This will download the nginx image if it's not already available on your system and start a container from it. You can then access the default nginx page by navigating to `http://localhost:80` in your web browser.
